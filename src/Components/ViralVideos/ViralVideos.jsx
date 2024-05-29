@@ -9,11 +9,11 @@ const ViralVideos = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://tiktok-scraper7.p.rapidapi.com/feed/list?region=us&count=10", {
+      const response = await fetch(`https://tiktok-scraper7.p.rapidapi.com/feed/list?region=us&count=10`, {
         method: "GET",
         headers: {
-          "x-rapidapi-host": "tiktok-scraper7.p.rapidapi.com",
-          "x-rapidapi-key": "9f9abe3d48mshbe37fee452bc816p15ff6djsna5b9b8ceafa2",
+          "x-rapidapi-host": process.env.REACT_APP_RAPIDAPI_HOST,
+          "x-rapidapi-key": process.env.REACT_APP_RAPIDAPI_KEY,
         },
       });
 
